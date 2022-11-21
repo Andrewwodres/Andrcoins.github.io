@@ -10,7 +10,7 @@ result = cur.execute("""SELECT * FROM Andrcoins""").fetchall()
 # Вывод результатов на экран
 
 print("Content-type: text/html")
-f = open("index.html", 'w')
+f = open("README.md", 'w')
 print(f.write('<h1 align="center">Andrcoins owners</h1>'))
 for elem in result:
     print(f.write(f"<h2 align='center'>{': '.join(map(str, elem))}</h2> \n"))
