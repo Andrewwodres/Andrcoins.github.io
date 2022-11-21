@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sqlite3
 
 con = sqlite3.connect("finans_piromida.db")
@@ -11,8 +10,8 @@ result = cur.execute("""SELECT * FROM Andrcoins""").fetchall()
 # Вывод результатов на экран
 
 print("Content-type: text/html")
-print()
-print('<h1 align="center">Andrcoins owners</h1>')
+f = open("index.html", 'w')
+print(f.write('<h1 align="center">Andrcoins owners</h1>'))
 for elem in result:
-    print(f"<h2 align='center'>{': '.join(map(str, elem))}</h2>")
+    print(f.write(f"<h2 align='center'>{': '.join(map(str, elem))}</h2> \n"))
 con.close()
