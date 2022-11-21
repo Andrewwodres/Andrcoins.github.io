@@ -6,25 +6,26 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
-<h1 align="center">Andrcoins owners</h1>
-<py-script>
-    import sqlite3
-
-    con = sqlite3.connect("finans_piromida.db")
-
-    # Создание курсора
-    cur = con.cursor()
-
-    # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT * FROM Andrcoins""").fetchall()
-    # Вывод результатов на экран
-
-    print("Content-type: text/html")
-    for elem in result:
-        n, b = elem
-        print(n, b)
-    con.close()
-</py-script>|
-<h2 align='center'>g</h2>
+    <h1 align="center">Andrcoins owners</h1><h2 align='center'>Andrwwodre: 100009</h2>
+    <h2 align='center'>Kopaev Platon: 20</h2>
+    <h2 align='center'>Dyatlova Anastasia: 20</h2>
+    <h2 align='center'>Alekseev Konstantin: 20</h2>
+    <h2 align='center'>Podolskiy Artem: 20</h2>
+    <h2 align='center'>Knyzev Ivan: -100</h2>
+    <h2 align='center'>Andrianova Maria: 20</h2>
+    <h2 align='center'>Kondrashkin Aleksandr: 20</h2>
+    <h2 align='center'>Pihtelev Mickle: 20</h2>
+    <h2 align='center'>Berezin Semen: 20</h2>
+    <h2 align='center'>Eremenko Alexey: 20</h2>
+    <h2 align='center'>Shmarin Artem: 20</h2>
+    <h2 align='center'>Cvetkov Ivan: 20</h2>
+    <h2 align='center'>Iliahsenko Aleksandra: 120</h2>
+    <h2 align='center'>Nikolaev Pavel: 20</h2>
+    <py-script>
+        from datetime import datetime
+        now = datetime.now()
+        now.strftime("%m/%d/%Y, %H:%M:%S")
+    </py-script>
+    на момент прверки
 </body>
 </html>
