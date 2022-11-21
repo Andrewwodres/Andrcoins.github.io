@@ -1,18 +1,30 @@
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
-<py-script> import sqlite3
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Andrcoins.необман</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+<h1 align="center">Andrcoins owners</h1>
+<py-script>
+    import sqlite3
 
-con = sqlite3.connect("finans_piromida.db")
+    con = sqlite3.connect("finans_piromida.db")
 
-# Создание курсора
-cur = con.cursor()
+    # Создание курсора
+    cur = con.cursor()
 
-# Выполнение запроса и получение всех результатов
-result = cur.execute("""SELECT * FROM Andrcoins""").fetchall()
-# Вывод результатов на экран
+    # Выполнение запроса и получение всех результатов
+    result = cur.execute("""SELECT * FROM Andrcoins""").fetchall()
+    # Вывод результатов на экран
 
-print("Content-type: text/html")
-print('<h1 align="center">Andrcoins owners</h1>')
-for elem in result:
-    print(f"<h2 align='center'>{': '.join(map(str, elem))}</h2> \n")
-con.close() </py-script>|
+    print("Content-type: text/html")
+    for elem in result:
+        n, b = elem
+        print(n, b)
+    con.close()
+</py-script>|
+<h2 align='center'>g</h2>
+</body>
+</html>
